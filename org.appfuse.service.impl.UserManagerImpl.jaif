@@ -1,0 +1,51 @@
+package org.springframework.stereotype:
+annotation @Service: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={TYPE})
+    String value
+
+package javax.jws:
+annotation @WebService: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={TYPE})
+    String name
+    String targetNamespace
+    String serviceName
+    String portName
+    String wsdlLocation
+    String endpointInterface
+
+package org.springframework.beans.factory.annotation:
+annotation @Autowired: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={CONSTRUCTOR,FIELD,METHOD})
+    boolean required
+
+package org.appfuse.service.impl:
+class UserManagerImpl: @org.springframework.stereotype.Service(value="userManager") @javax.jws.WebService(serviceName="UserService",endpointInterface="org.appfuse.service.UserService")
+
+    field passwordEncoder:
+
+    field userDao:
+
+    method <init>()V:
+        return:
+
+    method setPasswordEncoder(Lorg/springframework/security/authentication/encoding/PasswordEncoder;)V: @org.springframework.beans.factory.annotation.Autowired
+        return:
+
+    method setUserDao(Lorg/appfuse/dao/UserDao;)V: @org.springframework.beans.factory.annotation.Autowired
+        return:
+
+    method getUser(Ljava/lang/String;)Lorg/appfuse/model/User;:
+        return:
+
+    method getUsers()Ljava/util/List;:
+        return:
+
+    method saveUser(Lorg/appfuse/model/User;)Lorg/appfuse/model/User;:
+        return:
+
+    method removeUser(Ljava/lang/String;)V:
+        return:
+
+    method getUserByUsername(Ljava/lang/String;)Lorg/appfuse/model/User;:
+        return:
+
+    method search(Ljava/lang/String;)Ljava/util/List;:
+        return:
+

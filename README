@@ -1,0 +1,10 @@
+A REST spike based on a blog posting by Furious Bob.
+
+http://blog.furiousbob.com/2011/12/06/hateoas-restful-services-using-spring-3-1/
+
+Not working right now -- Path mapping is not working the way I think it should, I'm getting a conflict with an existing service, and when I comment that service out, the server won't start. I started with an AppFuse archetype, and I'm thinking that may be most of the problem. It's overkill for what I'm trying to do right now (may be overkill in any case).
+
+The singularly unhelpful error message is this:
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.cxf.jaxrs.spring.JAXRSServerFactoryBeanDefinitionParser$SpringJAXRSServerFactoryBean---2021417605': Invocation of init method failed; nested exception is org.apache.cxf.service.factory.ServiceConstructionException
+
